@@ -262,6 +262,7 @@ body {
 
 button {
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   column-gap: 4px;
   height: var(--input-height);
@@ -293,7 +294,7 @@ button {
 
 .panel {
   display: flex;
-  column-gap: 12px;
+  gap: 12px;
   width: 100%;
   max-width: 1080px;
   padding: 16px;
@@ -349,5 +350,20 @@ button {
 
   &:hover {
     background-color: var(--color-primary);
+  }
+}
+
+@media (max-width: 767px) {
+  .panel {
+    flex-wrap: wrap;
+  }
+
+  .panel__search {
+    flex-basis: 100%;
+  }
+
+  .panel__filter-button,
+  .panel__download-button {
+    flex: 1;
   }
 }
