@@ -225,3 +225,26 @@ svg * {
   }
 }
 
+:root {
+  --color-primary: #2563EB;
+  --color-dark-primary: #111827;
+
+  --color-bg-page: #F3F4F6;
+  --color-filter-bg: #EEF2FF;
+
+  --color-panel-bg: #FFFFFF;
+  --color-panel-border: #E5E7EB;
+
+  --color-field-bg: #F9FAFB;
+  --color-field-border: #EDF2F7;
+  --color-field-placeholder: #6B7280;
+
+  --border-radius: 16px;
+  --border: 1px solid #EDF2F7;
+
+  --font-family-base: 'Inter', sans-serif;
+
+  --input-height: 56px;
+
+  --transition-duration: 0.2s;
+}
