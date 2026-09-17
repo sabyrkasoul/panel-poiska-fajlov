@@ -9,7 +9,7 @@
   <body>
     <div class="panel">
       <search class="panel__search">
-        <form class="panel__form">
+        <form class="panel__form" id="search-form">
           <div class="panel__field field">
             <label class="visually-hidden" for="search-file">Поиск файлов</label>
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,7 @@
         </svg>
         <span>Фильтры</span>
       </button>
-      <button class="panel__download-button" type="button">
+      <button class="panel__download-button" type="submit" form="search-form">
         Загрузить
       </button>
     </div>
