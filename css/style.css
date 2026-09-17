@@ -229,7 +229,7 @@ svg * {
   --color-primary: #2563EB;
   --color-dark-primary: #111827;
 
-  --color-bg-page: #F3F4F6;
+  --color-page-bg: #F3F4F6;
   --color-filter-bg: #EEF2FF;
 
   --color-panel-bg: #FFFFFF;
@@ -247,4 +247,18 @@ svg * {
   --input-height: 56px;
 
   --transition-duration: 0.2s;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-family-base);
+  background-color: var(--color-page-bg);
+}
+
+:focus-visible {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
 }
