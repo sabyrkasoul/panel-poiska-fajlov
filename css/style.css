@@ -239,8 +239,10 @@ svg * {
   --color-field-border: #EDF2F7;
   --color-field-placeholder: #6B7280;
 
-  --border-radius: 16px;
-  --border: 1px solid #EDF2F7;
+  --border-radius: 32px;
+  --border-radius-small: 16px;
+  --border-panel: 1px solid var(--color-panel-border);
+  --border-field: 1px solid var(--color-field-border);
 
   --font-family-base: 'Inter', sans-serif;
 
@@ -253,12 +255,99 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
   font-family: var(--font-family-base);
   background-color: var(--color-page-bg);
 }
 
+button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  height: var(--input-height);
+  padding-inline: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: var(--border-radius-small);
+  transition-duration: var(--transition-duration);
+}
+
 :focus-visible {
-  outline: 2px dashed var(--color-primary);
+  outline: 2px dashed var(--color-dark-primary);
   outline-offset: 4px;
   transition-duration: 0s !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.panel {
+  display: flex;
+  column-gap: 12px;
+  width: 100%;
+  max-width: 1080px;
+  padding: 16px;
+  background-color: var(--color-panel-bg);
+  border: var(--border-panel);
+  border-radius: var(--border-radius);
+}
+
+.panel__search {
+  flex: 1;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-field-placeholder);
+  }
+
+  svg {
+    position: absolute;
+    left: 16px;
+  }
+}
+
+.field__input {
+  flex: 1;
+  height: var(--input-height);
+  padding-left: 48px;
+  padding-right: 16px;
+  background-color: var(--color-field-bg);
+  border: var(--border-field);
+  border-radius: var(--border-radius-small);
+}
+
+.panel__filter-button {
+  color: var(--color-primary);
+  background-color: var(--color-filter-bg);
+
+  &:hover {
+    color: var(--color-filter-bg);
+    background-color: var(--color-primary);
+  }
+}
+
+.panel__download-button {
+  color: var(--color-panel-bg);
+  background-color: var(--color-dark-primary);
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
 }
